@@ -50,8 +50,13 @@ public class Bejegyzes {
 
     @Override
     public String toString() {
+        if (this.getSzerkesztve().isAfter(this.getLetrejott())){
         return "\n" + this.szerzo + " - " + this.likeok + " - " + this.letrejott + "" +
                 "\n Szerkesztve: " + this.szerkesztve + "" +
                 "\n " + this.tartalom + "\n";
+        }else{
+        return "\n" + this.szerzo + " - " + this.likeok + " - " + this.letrejott + "" +
+                "\n " + this.tartalom + "\n";
+        }
     }
 }
