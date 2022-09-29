@@ -54,5 +54,13 @@ public class Main {
             bejegyzesek.get(feldob).like();
         }
         // 2/e
+        System.out.print("Kérem adja meg az új tartalmát a második bejegyzésnek");
+        String bekertTartalom = sc.nextLine();
+        bejegyzesek.get(1).setTartalom(bekertTartalom);
+        // 2/f
+        for (int i = 0; i < bejegyzesek.size(); i++) {
+            System.out.println(bejegyzesek.get(i).toString());
+        }
+        // 3/a
     }
 }
