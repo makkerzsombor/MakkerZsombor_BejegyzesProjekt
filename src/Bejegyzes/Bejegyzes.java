@@ -39,19 +39,19 @@ public class Bejegyzes {
     }
 
     //methods
-    public void setTartalom(String tartalom){
+    public void setTartalom(String tartalom) {
         this.szerkesztve = LocalDateTime.now();
         this.tartalom = tartalom;
     }
 
-    public void like(){
+    public void like() {
         this.likeok++;
     }
 
     @Override
     public String toString() {
-        return "\n" + this.szerzo+" - "+ this.likeok +" - "+this.letrejott +"" +
-                "\n Szerkesztve: "+ this.szerkesztve + "" +
+        return "\n" + this.szerzo + " - " + this.likeok + " - " + this.letrejott + "" +
+                "\n Szerkesztve: " + this.szerkesztve + "" +
                 "\n " + this.tartalom;
     }
 }
