@@ -87,6 +87,11 @@ public class Main {
         }
         System.out.printf("\nA bejegyzéseknél %d db bejegyzés kapott 15-nél kevesebb like-ot.\n",kisebb15nel);
         // 3/d
-
+        bejegyzesek.sort((x,y) -> (x.getLikeok() > y.getLikeok()) ? -1:1);
+        System.out.println("\nCsökkenő sorrend: ");
+        for (int i = 0; i < bejegyzesek.size(); i++) {
+            System.out.printf("\n %s \n",bejegyzesek.get(i));
+        }
+        // 3/d plusz
     }
 }
