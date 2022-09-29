@@ -69,7 +69,7 @@ public class Main {
                 legnagyobblike = bejegyzesek.get(i).getLikeok();
             }
         }
-        System.out.printf("\nA legtöbb like-ot elért bejegyzés %d like-ot kapott", legnagyobblike);
+        System.out.printf("\nA legtöbb like-ot elért bejegyzés %d like-ot kapott\n", legnagyobblike);
         // 3/b
         Boolean volte35 = false;
         for (int i = 0; i < bejegyzesek.size(); i++) {
@@ -77,6 +77,16 @@ public class Main {
                 volte35 = true;
             }
         }
-        System.out.printf("\nA bejegyzéseknél %s ,hogy volt e 35 likenál több egy bejegyzésen", volte35);
+        System.out.printf("\nA bejegyzéseknél %s ,hogy volt e 35 likenál több egy bejegyzésen\n", volte35);
+        // 3/c
+        int kisebb15nel = 0;
+        for (int i = 0; i < bejegyzesek.size(); i++) {
+            if (bejegyzesek.get(i).getLikeok()<15){
+                kisebb15nel++;
+            }
+        }
+        System.out.printf("\nA bejegyzéseknél %d db bejegyzés kapott 15-nél kevesebb like-ot.\n",kisebb15nel);
+        // 3/d
+
     }
 }
