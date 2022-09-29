@@ -50,7 +50,8 @@ public class Main {
         }
         // 2/d
         for (int i = 0; i < (bejegyzesek.size()*20); i++) {
-
+            int feldob = (int) (Math.random() * bejegyzesek.size());
+            bejegyzesek.get(feldob).like();
         }
         // 2/e
     }
