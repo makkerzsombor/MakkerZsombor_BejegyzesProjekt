@@ -49,5 +49,9 @@ public class Main {
             e.printStackTrace(System.err);
         }
         // 2/d
+        for (int i = 0; i < (bejegyzesek.size()*20); i++) {
+
+        }
+        // 2/e
     }
 }
