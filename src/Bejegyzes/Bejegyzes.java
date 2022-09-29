@@ -50,8 +50,8 @@ public class Bejegyzes {
 
     @Override
     public String toString() {
-        return this.szerzo+" - "+ this.likeok +" - "+this.letrejott +"" +
+        return "\n" + this.szerzo+" - "+ this.likeok +" - "+this.letrejott +"" +
                 "\n Szerkesztve: "+ this.szerkesztve + "" +
-                "\n " + this.tartalom + "\n";
+                "\n " + this.tartalom;
     }
 }

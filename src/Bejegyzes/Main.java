@@ -62,5 +62,14 @@ public class Main {
             System.out.println(bejegyzesek.get(i).toString());
         }
         // 3/a
+        int legnagyobblike = 0;
+        for (int i = 0; i < bejegyzesek.size(); i++) {
+            if (bejegyzesek.get(i).getLikeok()>legnagyobblike){
+                legnagyobblike = bejegyzesek.get(i).getLikeok();
+            }
+        }
+        System.out.printf("A legtöbb like-ot elért bejegyzés %d like-ot kapott",legnagyobblike);
+        // 3/b
+
     }
 }
