@@ -1,9 +1,6 @@
 package Bejegyzes;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -81,17 +78,22 @@ public class Main {
         // 3/c
         int kisebb15nel = 0;
         for (int i = 0; i < bejegyzesek.size(); i++) {
-            if (bejegyzesek.get(i).getLikeok()<15){
+            if (bejegyzesek.get(i).getLikeok() < 15) {
                 kisebb15nel++;
             }
         }
-        System.out.printf("\nA bejegyzéseknél %d db bejegyzés kapott 15-nél kevesebb like-ot.\n",kisebb15nel);
+        System.out.printf("\nA bejegyzéseknél %d db bejegyzés kapott 15-nél kevesebb like-ot.\n", kisebb15nel);
         // 3/d
-        bejegyzesek.sort((x,y) -> (x.getLikeok() > y.getLikeok()) ? -1:1);
+        bejegyzesek.sort((x, y) -> (x.getLikeok() > y.getLikeok()) ? -1 : 1);
         System.out.println("\nCsökkenő sorrend: ");
         for (int i = 0; i < bejegyzesek.size(); i++) {
-            System.out.printf("\n %s \n",bejegyzesek.get(i));
+            System.out.printf("\n %s \n", bejegyzesek.get(i));
         }
         // 3/d plusz
+        FileWriter fw = new FileWriter("bejegyzesek_rendezett.txt");
+        for (int i = 0; i < bejegyzesek.size(); i++) {
+            fw.write(bejegyzesek.get(i).toString());
+        }
+        fw.close();
     }
 }

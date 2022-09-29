@@ -52,6 +52,6 @@ public class Bejegyzes {
     public String toString() {
         return "\n" + this.szerzo + " - " + this.likeok + " - " + this.letrejott + "" +
                 "\n Szerkesztve: " + this.szerkesztve + "" +
-                "\n " + this.tartalom;
+                "\n " + this.tartalom + "\n";
     }
 }
