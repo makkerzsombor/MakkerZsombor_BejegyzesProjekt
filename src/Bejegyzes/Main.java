@@ -1,12 +1,16 @@
 package Bejegyzes;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
 
     static ArrayList<Bejegyzes> bejegyzesek = new ArrayList<>();
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // 2/a
         bejegyzesek.add(new Bejegyzes("Kovács István","Ez egy alma fa."));
         bejegyzesek.add(new Bejegyzes("Nagy Péter","Ez egy körte fa."));
@@ -28,6 +32,22 @@ public class Main {
             }
         }
         // 2/c
-
+        try{
+            FileReader fr = new FileReader("bejegyzesek.csv");
+            BufferedReader br = new BufferedReader(fr);
+            String sor = br.readLine();
+            while(sor != null && !sor.equals("")){
+                String[] tomb = sor.split(";");
+                bejegyzesek.add(new Bejegyzes(tomb[0],tomb[1]));
+                sor = br.readLine();
+            }
+            br.close();
+            fr.close();
+        }catch (FileNotFoundException e){
+            e.printStackTrace(System.err);
+        }catch (IOException e){
+            e.printStackTrace(System.err);
+        }
+        // 2/d
     }
 }
